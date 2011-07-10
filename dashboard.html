@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		
+		<link rel = StyleSheet href = "css/dashboard/dashboard.css" type = "text/css" media = screen> 
+		<script src="js/jquery/jquery-1.6.1.min.js"></script>
+		<script src="js/jquery/jquery-ui-1.8.13.custom.min.js"></script>
+		<script src="js/modernizr/modernizr.js"></script>
+		<script src="js/dashboard/dashboard.js"></script>
+		
+		<! Check for htm5 canvas support>
+		<script>
+			if(!Modernizr.canvas)
+				window.location = 'unsupportedbrowser.html';
+		</script>
+
+		<script>
+			$(document).ready(function()
+			{
+				loadNotes();
+			});
+		</script>
+		
+	</head>
+	<body>		
+		<div id = "windowDiv" >
+			<div id = "menu">
+				<div id = "newNoteButton" class = "buttons" onmousedown = "createNoteWOContent()">
+					<img src = "imgs/dashboard/newNote.png" alt = "New Note Button"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
