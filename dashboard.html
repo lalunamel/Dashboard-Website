@@ -4,26 +4,22 @@
 		<title>Dashboard</title>
 		
 		<link rel = StyleSheet href = "css/dashboard/dashboard.css" type = "text/css" media = screen> 
-		<script src="js/jquery/jquery-1.6.1.min.js"></script>
-		<script src="js/jquery/jquery-ui-1.8.13.custom.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 		<script src="js/modernizr/modernizr.js"></script>
 		<script src="js/dashboard/dashboard.js"></script>
-		
-		<! Check for htm5 canvas support>
 		<script>
-			if(!Modernizr.canvas)
+			if(!Modernizr.localstorage)
 				window.location = 'unsupportedbrowser.html';
 		</script>
-
 		<script>
-			$(document).ready(function()
-			{
+			$(document).ready(function() 
+      {
 				loadNotes();
 			});
 		</script>
-		
 	</head>
-	<body>		
+	<body onunload = "saveNotes()">		
 		<div id = "windowDiv" >
 			<div id = "menu">
 				<div id = "newNoteButton" class = "buttons" onmousedown = "createNoteWOContent()">
