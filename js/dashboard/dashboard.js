@@ -38,7 +38,7 @@ function createNoteWOContent()
   var noteName = "note" + noteNumber;
   var xPos = 10;
   var yPos = 10;
-  var content = '<textarea name = "textBoxArea" id = "textArea' + noteNumber + '" class = "textAreas" onblur = "sendNote(\'' + noteName + '\')"></textarea>';
+  var content = '<textarea name = "textBoxArea" id = "textArea' + noteNumber + '" class = "textAreas" onblur = "updateText(\'' + noteName + '\'); sendNote(\'' + noteName + '\')"></textarea>';
   
   var newNote = 
 			'<div id = "' + noteName + '" class = "ui-widget-content notes" style = "left:' + xPos + 'px; top:' + yPos + 'px;">	 \
@@ -98,4 +98,8 @@ function submitCont(id)
 	contentWrapper.innerHTML = newContentHTML;
 }
 
-
+function updateText(noteId)
+{
+  var textArea = document.getElementById(noteId).lastElementChild.firstElementChild;
+  textArea.innerHTML = textArea.value;
+}
