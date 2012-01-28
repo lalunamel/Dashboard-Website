@@ -1,4 +1,7 @@
-@font-face {
+
+
+@font-face
+{
     font-family: 'Cartoon';
     src: url('../../fonts/dashboard/sf_cartoonist_hand-webfont.eot');
     src: url('../../fonts/dashboard/sf_cartoonist_hand-webfont.eot?#iefix') format('embedded-opentype'),
@@ -9,156 +12,122 @@
     font-style: normal;
 }
 
+html, body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
 #windowDiv
 {
-	position					: absolute;
-	left							: 0px;
-	bottom						: 0px;
-	width							: 100%;
-	height						: 100%;
-	overflow  				: hidden;
-	background-image	: url(../../imgs/dashboard/bgPattern.png);
-	background-repeat	: repeat;
-	z-index						: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../imgs/dashboard/bgPattern.png) repeat;
 }
 
 #menu
 {
-	position		 		 : relative;
-	margin					 : 0 auto;
-	height			 		 : 50px;
-	width		 		 		 : 70px;
-	background-color : #FF9F80;
-	border-style		 :solid;
-	border-width		 :5px;
-	border-top-width : 0px;
-	border-color		 : #F56991;
-	border-radius 	 : 0px 0px 5px 5px;
-	
-	-webkit-transition-duration 			 : 250ms;
-	-webkit-transition-timing-function : ease-in-out;
-	-moz-transition-duration 			 : 250ms;
-	-moz-transition-timing-function : ease-in-out;
-	top : -50px;
+    position: relative;
+    height: 50px;
+    width: 70px;
+    top: -50px;
+    margin: 0 auto;
+    background-color: #FF9F80;
+    border: solid 5px #F56991;
+    border-top-width: 0px;
+    border-radius: 0px 0px 5px 5px;
+    -webkit-transition: top 250ms ease-in-out;
+    -moz-transition: top 250ms ease-in-out;
+    -o-transition: top 250ms ease-in-out;
 }
 
 #newNoteButton
 {
-	height : 50px;
-	width  : 50px;
+    height: 50px;
+    width: 50px;
 }
 
 #menu:hover
 {
-	top																 : 0px;
-	-webkit-transition-duration 			 : 250ms;
-	-webkit-transition-timing-function : ease-in-out;
-	-moz-transition-duration 			 : 250ms;
-	-moz-transition-timing-function : ease-in-out;
+    top: 0px;
+    -webkit-transition: top 250ms ease-in-out;
+    -moz-transition: top 250ms ease-in-out;
+    -o-transition: top 250ms ease-in-out;
 }
 
 .buttons
 {
-	position		 : relative;
-	float				 : left;
-	margin-left	 : 10px;
-	margin-right : 10px;
-	height			 : 45px;
-	width 			 : 45px;
-	cursor			 : pointer;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
 }
 
-
 .notes
-{ 
-	position			: absolute;
-	
-  background-color: #d1f2a5;
-  
-	border-style	:solid;
-	border-width	:5px;
-	border-color 	: #F56991;
-	border-radius : 4px 4px 4px 4px;
+{
+    position: absolute;
+    background-color: #d1f2a5;
+    border: solid 5px #F56991;
+    border-radius: 4px 4px 4px 4px;
 }
 
 .closeButtons
 {
-	position : absolute;
-	width 	 : 20px;
-	height 	 : 20px;
-	z-index	 : 2;
-	cursor: pointer;
-  background-image: url("../../imgs/dashboard/deleteButton.png");
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    cursor: pointer;
+    background-image: url("../../imgs/dashboard/deleteButton.png");
 }
 
 .closeButtons:hover
 {
-  background-image: url("../../imgs/dashboard/deleteButtonMouseOver.png");
+    background-image: url("../../imgs/dashboard/deleteButtonMouseOver.png");
 }
 
 .submitButtons
 {
-	position : absolute;
-	right 	 : 0px;
-	width 	 : 20px;
-	height 	 : 20px;
-	z-index	 : 3;
-	cursor	 : pointer;
+    position: absolute;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    cursor: pointer;
 }
 
 .handles
 {
-	position: absolute;
-	width		: 100%;
-	height	: 20px;
-	z-index	:	1;
-	cursor	: pointer;
-  background-image			: url(../../imgs/dashboard/handlePattern.png);
-	background-repeat 		: repeat-x;
-}
-
-.handleImages
-{
-	width									: 100%;
-	height								: 100%;
-	
-}
-
-.noteImages
-{
-	width								: 100%;
-	height							: 100%;
-	z-index							: 0;
-	position 						: absolute;
-	
-	background-color		:	#D1F2A5;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+    background-image: url(../../imgs/dashboard/handlePattern.png);
+    background-repeat: repeat-x;
 }
 
 .contents
 {
-	clear 					 : both;
-	padding-top			 : 20px;
-	position 				 : relative;
-	z-index  				 : 0;
-  margin-bottom: -5px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: -5px;
 }
 
 .contents *
 {
-	padding : 0px;
+    padding: 0px;
 }
 
 .textAreas
 {
-	width						 : 100%;
-	height					 : 100%;
-
-	font-size				 : 30px;
-	font-weight			 : 580;
-	font-family			 : Cartoon;
-
-	overflow						: hidden;
-	background-color		: transparent;
-	border							: none;
+    font-size: 30px;
+    font-family: Cartoon;
+    background-color: transparent;
+    border: none;
 }
-
